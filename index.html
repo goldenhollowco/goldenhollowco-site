@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script src="https://unpkg.com/feather-icons"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golden Hollow Co.</title>
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
@@ -39,6 +40,10 @@
       font-weight: 600;
       color: #5b4031;
       font-family: 'Quicksand', sans-serif;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #3e2c20;
     }
     main {
       padding: 2rem;
@@ -53,12 +58,22 @@
       padding-bottom: 0.5rem;
       color: #4a3b30;
       font-family: 'Gloock', serif;
+    }
+
+    .button-grid {
     .button-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
     .button-grid a {
+      color: #5b4031;
+      text-decoration: none;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
       flex: 1 1 calc(50% - 1rem);
       background: #f4ede3;
       padding: 1rem;
@@ -132,10 +147,10 @@
     <section id="links">
       <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;" style="font-family: 'Gloock', serif; font-size: 1.75rem;">Shop & Social Links</h2>
       <div class="button-grid">
-        <a href="https://poshmark.com/closet/goldenhollowco" target="_blank">Poshmark</a>
-        <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank">Whatnot</a>
-        <a href="https://www.instagram.com/goldenhollowco" target="_blank">Instagram</a>
-        <a href="https://www.pinterest.com/goldenhollowco" target="_blank">Pinterest</a>
+        <a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
+        <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank"><i data-feather="box"></i> Whatnot</a>
+        <a href="https://www.instagram.com/goldenhollowco" target="_blank"><i data-feather="camera"></i> Instagram</a>
+        <a href="https://www.pinterest.com/goldenhollowco" target="_blank"><i data-feather="bookmark"></i> Pinterest</a>
       </div>
     </section>
 
@@ -154,10 +169,10 @@
       <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">Honey Hollow ⚠️</h2>
       <p>This section contains links to adult content. Proceed only if you're 18+.</p>
       <div class="button-grid">
-        <a href="https://onlyfans.com/honeyhollow" target="_blank">OnlyFans</a>
-        <a href="https://twitter.com/honeyhollowxo" target="_blank">Spicy Twitter</a>
-        <a href="https://www.throne.com/honeyhollow" target="_blank">Wishlist</a>
-        <a href="https://cash.app/$honeyhollow" target="_blank">Tip Jar</a>
+        <a href="https://onlyfans.com/honeyhollow" target="_blank"><i data-feather="star"></i> OnlyFans</a>
+        <a href="https://twitter.com/honeyhollowxo" target="_blank"><i data-feather="message-square"></i> Twitter</a>
+        <a href="https://www.throne.com/honeyhollow" target="_blank"><i data-feather="gift"></i> Wishlist</a>
+        <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
       </div>
     </section>
   </main>
@@ -165,5 +180,6 @@
   <footer>
     &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
   </footer>
+  <script>feather.replace();</script>
 </body>
 </html>
