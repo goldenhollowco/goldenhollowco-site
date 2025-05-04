@@ -4,10 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golden Hollow Co.</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #fefdf9;
+      margin: 0;
+      padding: 0;
+      color: #2c2c2c;
+    }
+    header {
+      background: #e5dccd;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: #d7c9b7;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #6a4e42;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e5dccd;
+      padding-bottom: 0.5rem;
+      color: #4a3b30;
+    }
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .button-grid a {
+      flex: 1 1 calc(50% - 1rem);
+      background: #f4ede3;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #6a4e42;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+      background: #f0ebe2;
+    }
+  </style>
 </head>
-<body style="font-family: Georgia, serif; background: #fefdf9; text-align: center; padding: 2rem;">
-  <h1>Welcome to Golden Hollow Co.</h1>
-  <p>This is your live homepage. ✨</p>
-  <p><a href="#honey">Click here to visit Honey Hollow (18+)</a></p>
+<body>
+  <header>
+    <h1>Golden Hollow Co.</h1>
+    <p>Quiet magic, vintage treasures, handmade charm.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#links">Links</a>
+    <a href="#videos">YouTube</a>
+    <a href="#blog">Blog</a>
+    <a href="#honey">Honey Hollow ⚠️</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Golden Hollow Co. is a small, enchanted brand rooted in the love of vintage finds, handmade treasures, and the quiet magic of everyday beauty.</p>
+    </section>
+
+    <section id="links">
+      <h2>Shop & Social Links</h2>
+      <div class="button-grid">
+        <a href="#">Poshmark</a>
+        <a href="#">Whatnot</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>YouTube</h2>
+      <p>Check out the latest videos from the Hollow!</p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="blog">
+      <h2>From the Blog</h2>
+      <p><strong>Coming Soon:</strong> Seasonal updates, behind-the-scenes, and stories from the Hollow.</p>
+    </section>
+
+    <section id="honey">
+      <h2>Honey Hollow ⚠️</h2>
+      <p>This section contains links to adult content. Proceed only if you're 18+.</p>
+      <div class="button-grid">
+        <a href="#">OnlyFans</a>
+        <a href="#">Spicy Twitter</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Tip Jar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
+  </footer>
 </body>
 </html>
