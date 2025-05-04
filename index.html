@@ -65,14 +65,18 @@
       padding: 1rem;
       text-align: center;
       border: 1px solid #d1bfa9;
-      border-radius: 8px;
+      border-radius: 12px;
       text-decoration: none;
       color: #6a4e42;
       font-weight: bold;
       font-family: 'Quicksand', sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     .button-grid a:hover {
       background: #f1e3d2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
     }
     footer {
       text-align: center;
@@ -80,6 +84,20 @@
       font-size: 0.9rem;
       color: #998a7c;
       background: #f7f3ee;
+    }
+      .fade-in {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -101,11 +119,14 @@
     <a href="#honey">Honey Hollow ⚠️</a>
   </nav>
 
-  <main>
+  <main class="fade-in">
     <section id="about">
       <h2>About</h2>
       <p>Golden Hollow Co. is a small, enchanted brand rooted in the love of vintage finds, handmade treasures, and the quiet magic of everyday beauty.</p>
     </section>
+    <div style="text-align:center; margin: 2rem auto;">
+      <img src="https://raw.githubusercontent.com/goldenhollowco/assets/main/moon-divider.svg" alt="divider" style="width: 32px; opacity: 0.6;" />
+    </div>
 
     <section id="links">
       <h2>Shop & Social Links</h2>
