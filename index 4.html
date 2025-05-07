@@ -2,12 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script src="https://unpkg.com/feather-icons"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golden Hollow Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background: #fdf9f5 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background-repeat: repeat;
+      margin: 0;
+      padding: 0;
+      color: #3e2c20;
+    }
+    header {
+      background: #f3e8dc;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: #e8dcca;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: #5b4031;
+      font-family: 'Quicksand', sans-serif;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #3e2c20;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e0cdbc;
+      padding-bottom: 0.5rem;
+      color: #4a3b30;
+      font-family: 'Gloock', serif;
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .button-grid a {
+      color: #5b4031;
+      text-decoration: none;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex: 1 1 calc(50% - 1rem);
+      background: #f4ede3;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid #d1bfa9;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #6a4e42;
+      font-weight: bold;
+      font-family: 'Quicksand', sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .button-grid a:hover {
+      background: #f1e3d2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #998a7c;
+      background: #f7f3ee;
+    }
+      .fade-in {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }.button-grid i {
+      color: #5b4031;
+      width: 18px;
+      height: 18px;
+    }
+
+  </style>
 </head>
-<body style="font-family: Georgia, serif; background: #fefdf9; text-align: center; padding: 2rem;">
-  <h1>Welcome to Golden Hollow Co.</h1>
-  <p>This is your live homepage. ✨</p>
-  <p><a href="#honey">Click here to visit Honey Hollow (18+)</a></p>
+<body>
+  <header>
+    <img src="golden_hollow_logo.jpeg" alt="Golden Hollow Co. logo" />
+    <h1 style="font-family: 'Gloock', serif; font-size: 3rem;">Golden Hollow Co.</h1>
+    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; margin-top: 0.5rem;">
+      Creating. Curating. Captivating.<br />
+      Discover the glow within.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#links">Links</a>
+    <a href="#videos">YouTube</a>
+    <a href="#blog">Blog</a>
+    <a href="#honey">The Honey Hollow ✧</a>
+  </nav>
+
+  <main class="fade-in">
+    <section id="about">
+  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">About</h2>
+  <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">
+  Golden Hollow Co. is where soft light filters through quiet branches — a refuge for the curious and the wild-hearted alike.
+  Drawn to golden light, wild paths, and the quiet hum of beautiful things, this space was made to feel like stepping into a dream.
+</p>
+<p style="font-style: italic; font-family: 'Quicksand', sans-serif; font-size: 0.95rem; margin-top: 0.75rem;">
+  Not everything here is polished — some things are just what felt good that day.
+</p>
+  
+</section>
+    
+
+    <section id="links">
+      <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">Shop & Social Links</h2>
+      <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
+<a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
+        <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank"><i data-feather="box"></i> Whatnot</a>
+        <a href="https://www.instagram.com/goldenhollowco" target="_blank"><i data-feather="camera"></i> Instagram</a>
+        <a href="https://www.pinterest.com/goldenhollowco" target="_blank"><i data-feather="bookmark"></i> Pinterest</a>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">YouTube</h2>
+      <p style="font-family: 'Gloock', serif;">Check out the latest videos from the Hollow!</p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/L8Gnvqj5rHw" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="blog">
+  <img src="Screenshot 2025-05-02 at 9.18.52 PM.png" alt="Golden Hollow Tree" style="width: 100%; max-width: 800px; border-radius: 12px; margin-bottom: 1rem;" />
+  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">From the Blog</h2>
+  <article style="margin-top: 1rem;">
+    <h3 style="font-family: 'Gloock', serif; font-size: 1.25rem; margin-bottom: 0.25rem;">Welcome to the Hollow</h3>
+    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">Thank you for wandering into Golden Hollow. Whether you're here for soft moments, vintage magic, or quiet inspiration, I'm so glad you're here. This space will grow and shift — just like the woods — and I'm excited to see where it takes us. ✨</p>
+  </article>
+</section>
+
+    <section id="honey">
+      <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">The Honey Hollow ✧</h2>
+      <p style="font-family: 'Gloock', serif; color: #7b5e4e;">Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.</p>
+      <div class="button-grid">
+        <a href="https://onlyfans.com/honeyhollow" target="_blank"><i data-feather="star"></i> OnlyFans</a>
+        <a href="https://twitter.com/honeyhollowxo" target="_blank"><i data-feather="message-square"></i> Twitter</a>
+        <a href="https://throne.com/goldenhollowco" target="_blank"><i data-feather="gift"></i> Wishlist</a>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
+  </footer>
+  <script>feather.replace();</script>
 </body>
 </html>
