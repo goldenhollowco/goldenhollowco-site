@@ -6,54 +6,56 @@
   <title>Golden Hollow Co</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-amber-50 text-gray-900">
+<body class="bg-stone-100 text-stone-900 font-sans">
 
-  <header class="bg-amber-800 text-white py-6">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Golden Hollow Co</h1>
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-amber-800">Golden Hollow Co</h1>
       <nav class="space-x-4">
-        <a href="/" class="hover:underline">Home</a>
-        <a href="/videos.html" class="hover:underline">Videos</a>
-        <a href="/blog.html" class="hover:underline">Blog</a>
-        <a href="/about.html" class="hover:underline">About</a>
+        <a href="index.html" class="text-stone-700 hover:text-amber-800">Home</a>
+        <a href="about.html" class="text-stone-700 hover:text-amber-800">About</a>
+        <a href="blog.html" class="text-stone-700 hover:text-amber-800">Blog</a>
+        <a href="videos.html" class="text-stone-700 hover:text-amber-800">Videos</a>
+        <a href="links.html" class="text-stone-700 hover:text-amber-800">Links</a>
       </nav>
     </div>
   </header>
 
-  <main class="py-12 px-4">
-    <section class="text-center max-w-3xl mx-auto">
-      <h2 class="text-4xl font-bold mb-4">Welcome to the Hollow</h2>
-      <p class="text-lg text-gray-700">Stories, stillness, survival — told with softness and strength. Dive into the calm chaos of a life reclaimed.</p>
-    </section>
+  <!-- Hero -->
+  <section class="bg-amber-100 py-16 text-center">
+    <h2 class="text-4xl font-bold text-amber-800 mb-4">Welcome to Golden Hollow</h2>
+    <p class="text-lg text-stone-700">A soft place to land. Stories, moments, musings from the hollow.</p>
+  </section>
 
-    <!-- FROM THE HOLLOW VIDEO GRID -->
-    <section id="from-the-hollow" class="py-12 px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">From the Hollow</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="aspect-w-9 aspect-h-16">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/1g1qKfdlnxA" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="aspect-w-9 aspect-h-16">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/iCN3VBGD_mY" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="aspect-w-9 aspect-h-16">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/QMyeJ5x_Pls" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="aspect-w-9 aspect-h-16">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/iRI_HpIToIU" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="aspect-w-9 aspect-h-16">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/6oHrd8m9JCw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
+  <!-- From the Hollow Video Grid -->
+  <section id="from-the-hollow" class="py-12 px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">From the Hollow</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="aspect-w-9 aspect-h-16">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/1g1qKfdlnxA" title="YouTube video" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="mt-10 text-center">
-        <a href="/videos.html" class="inline-block px-6 py-2 bg-amber-800 text-white rounded-xl shadow hover:bg-amber-700">View All Videos</a>
+      <div class="aspect-w-9 aspect-h-16">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/iCN3VBGD_mY" title="YouTube video" frameborder="0" allowfullscreen></iframe>
       </div>
-    </section>
-  </main>
+      <div class="aspect-w-9 aspect-h-16">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/QMyeJ5x_Pls" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-w-9 aspect-h-16">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/iRI_HpIToIU" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-w-9 aspect-h-16">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/6oHrd8m9JCw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="mt-10 text-center">
+      <a href="/videos.html" class="inline-block px-6 py-2 bg-amber-800 text-white rounded-xl shadow hover:bg-amber-700">View All Videos</a>
+    </div>
+  </section>
 
-  <footer class="bg-amber-800 text-white py-6 mt-12">
-    <div class="max-w-6xl mx-auto px-4 text-center">
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-stone-500">
       &copy; 2025 Golden Hollow Co. All rights reserved.
     </div>
   </footer>
