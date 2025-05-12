@@ -79,10 +79,7 @@
       text-align: center;
       border: 1px solid #d1bfa9;
       border-radius: 12px;
-      text-decoration: none;
-      color: #6a4e42;
       font-weight: bold;
-      font-family: 'Quicksand', sans-serif;
       transition: all 0.3s ease;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
@@ -98,10 +95,9 @@
       color: #998a7c;
       background: #f7f3ee;
     }
-      .fade-in {
+    .fade-in {
       animation: fadeInUp 1s ease-out both;
     }
-
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -111,12 +107,22 @@
         opacity: 1;
         transform: translateY(0);
       }
-    }.button-grid i {
+    }
+    .button-grid i {
       color: #5b4031;
       width: 18px;
       height: 18px;
     }
-
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .video-grid iframe {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -139,86 +145,26 @@
 
   <main class="fade-in">
     <section id="about">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">About</h2>
-  <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">
-  Golden Hollow Co. is where soft light filters through quiet branches — a refuge for the curious and the wild-hearted alike.
-  Drawn to golden light, wild paths, and the quiet hum of beautiful things, this space was made to feel like stepping into a dream.
-</p>
-<p style="font-style: italic; font-family: 'Quicksand', sans-serif; font-size: 0.95rem; margin-top: 0.75rem;">
-  Not everything here is polished — some things are just what felt good that day.
-</p>
-  
-</section>
-    
-
-   <section id="links">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">Shop & Social Links</h2>
-  <div class="button-grid">
-    <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
-    <a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
-    <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank"><i data-feather="box"></i> Whatnot</a>
-    <a href="https://www.instagram.com/goldenhollowco" target="_blank"><i data-feather="camera"></i> Instagram</a>
-    <a href="https://www.pinterest.com/goldenhollowco" target="_blank"><i data-feather="bookmark"></i> Pinterest</a>
-    <a href="https://www.tiktok.com/@goldenhollowco" target="_blank"><i data-feather="video"></i> TikTok</a>
-  </div>
-</section>
-
-
-   <section id="videos">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">From the Hollow</h2>
-  <p style="font-family: 'Quicksand', sans-serif;">Check out the latest videos from the Hollow.</p>
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-    <iframe src="https://www.youtube.com/embed/1g1qKfdlnxA" title="YouTube video" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 9/16;"></iframe>
-    <iframe src="https://www.youtube.com/embed/iCN3VBGD_mY" title="YouTube video" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 9/16;"></iframe>
-    <iframe src="https://www.youtube.com/embed/QMyeJ5x_Pls" title="YouTube video" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 9/16;"></iframe>
-    <iframe src="https://www.youtube.com/embed/iRI_HpIToIU" title="YouTube video" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 9/16;"></iframe>
-    <iframe src="https://www.youtube.com/embed/6oHrd8m9JCw" title="YouTube video" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 9/16;"></iframe>
-  </div>
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/videos.html" style="display: inline-block; background: #5b4031; color: white; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; font-family: 'Quicksand', sans-serif;">View All Videos</a>
-  </div>
-</section>
-
-
-    <section id="blog">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">From the Blog</h2>
-  <article style="margin-top: 1.5rem;">
-    <h3 style="font-family: 'Gloock', serif; font-size: 1.25rem; margin-bottom: 0.5rem;">Welcome to the Hollow</h3>
-    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem; line-height: 1.6;">
-      I don’t always know what I’m doing here — and maybe that’s the point.
-    </p>
-    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem; line-height: 1.6;">
-      This space was never meant to be rigid or perfect. It’s a place for slow glances, soft ideas, spontaneous moments, and things that don’t need to be explained.
-    </p>
-    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem; line-height: 1.6;">
-      Sometimes you’ll find photos. Sometimes rambling thoughts. Sometimes links to things I’ve made or worn or just liked that day.
-    </p>
-    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem; line-height: 1.6;">
-      If you’re here, I hope you find something that feels a little like a secret.<br>
-      And if you come back again, I hope it feels like returning to a path only you remember.
-    </p>
-    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem; line-height: 1.6;">
-      Thanks for stepping inside. The Hollow is always shifting — and that’s what makes it real.
-    </p>
-  </article>
-</section>
-
-
-   <section id="honey">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">The Honey Hollow ✧</h2>
-  <p style="font-family: 'Gloock', serif; color: #7b5e4e;">Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.</p>
-  <div class="button-grid">
-    <a href="honey.html"><i data-feather="moon"></i> Enter the Hollow</a>
-  </div>
-</section>
-
-        </div>
+      <h2>About</h2>
+      <p>Golden Hollow Co. is where soft light filters through quiet branches — a refuge for the curious and the wild-hearted alike. Drawn to golden light, wild paths, and the quiet hum of beautiful things, this space was made to feel like stepping into a dream.</p>
+      <p style="font-style: italic;">Not everything here is polished — some things are just what felt good that day.</p>
     </section>
-  </main>
 
-  <footer>
-    &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
-  </footer>
-  <script>feather.replace();</script>
-</body>
-</html>
+    <section id="links">
+      <h2>Shop & Social Links</h2>
+      <div class="button-grid">
+        <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
+        <a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
+        <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank"><i data-feather="box"></i> Whatnot</a>
+        <a href="https://www.instagram.com/goldenhollowco" target="_blank"><i data-feather="camera"></i> Instagram</a>
+        <a href="https://www.pinterest.com/goldenhollowco" target="_blank"><i data-feather="bookmark"></i> Pinterest</a>
+        <a href="https://www.tiktok.com/@goldenhollowco" target="_blank"><i data-feather="video"></i> TikTok</a>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>YouTube</h2>
+      <p>Check out the latest videos from the Hollow:</p>
+      <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/1g1qKfdlnxA" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/iCN3VBGD_mY" title="YouTube video
