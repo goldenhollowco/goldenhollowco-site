@@ -71,11 +71,9 @@
       display:grid; place-items:center; overflow:hidden; position:relative;
     }
     .imgwrap img{ width:100%; height:100%; object-fit:cover; display:block; }
-    /* tasteful placeholder for now */
     .ph{
       width:100%; height:100%; display:grid; place-items:center; text-align:center;
-      background:
-        radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.75), rgba(255,255,255,.35)),
+      background:radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.75), rgba(255,255,255,.35)),
         linear-gradient(180deg, #f9e8c7, #f0d2a0);
       color:#6e573f; font-family:'Gloock',serif; padding:1rem;
     }
@@ -127,7 +125,7 @@
 
   <main>
     <div class="toolbar">
-      <input id="search" type="search" placeholder="Search products (e.g., ‘beeswax’, ‘book’, ‘camera’)…" />
+      <input id="search" type="search" placeholder="Search products (e.g., ‘beeswax’, ‘book’, ‘camping’)…" />
     </div>
 
     <div id="grid" class="grid"></div>
@@ -139,55 +137,80 @@
   </footer>
 
   <script>
-    // ========= HOW TO UPDATE IMAGES & NAMES =========
-    // For each item below:
-    //  - name:  Type the product title (anything you like)
-    //  - image: Paste the product's main image URL
-    //           (open the main image in a new tab, copy the URL;
-    //            it should look like https://m.media-amazon.com/images/I/....jpg)
-    //  - amazon: Your amzn.to or full affiliate link
-    //  - tag/note/post: Optional niceties
-
     const items = [
-      { tag:"Finds", name:"Item 1",  note:"", image:"", amazon:"https://amzn.to/3UWe1AS", post:"" },
-      { tag:"Finds", name:"Item 2",  note:"", image:"", amazon:"https://amzn.to/41yXtCC", post:"" },
-      { tag:"Finds", name:"Item 3",  note:"", image:"", amazon:"https://amzn.to/3I1lCel", post:"" },
-      { tag:"Finds", name:"Item 4",  note:"", image:"", amazon:"https://amzn.to/46iqHZ6", post:"" },
-      { tag:"Finds", name:"Item 5",  note:"", image:"", amazon:"https://amzn.to/3HPSB5s", post:"" },
-      { tag:"Finds", name:"Item 6",  note:"", image:"", amazon:"https://amzn.to/3VpO4d0", post:"" },
-      { tag:"Finds", name:"Item 7",  note:"", image:"", amazon:"https://amzn.to/3JEx1kZ", post:"" },
-      { tag:"Finds", name:"Item 8",  note:"", image:"", amazon:"https://amzn.to/3JZw5aJ", post:"" },
-      { tag:"Finds", name:"Item 9",  note:"", image:"", amazon:"https://amzn.to/4n9CLBu", post:"" },
-      { tag:"Finds", name:"Item 10", note:"", image:"", amazon:"https://amzn.to/4p1FpLv", post:"" },
-      { tag:"Finds", name:"Item 11", note:"", image:"", amazon:"https://amzn.to/4n7RooX", post:"" },
-      { tag:"Finds", name:"Item 12", note:"", image:"", amazon:"https://amzn.to/4nbqvAB", post:"" },
-      { tag:"Finds", name:"Item 13", note:"", image:"", amazon:"https://amzn.to/4nbqvAB", post:"" },
-      { tag:"Finds", name:"Item 14", note:"", image:"", amazon:"https://amzn.to/3URoEF3", post:"" },
-      { tag:"Finds", name:"Item 15", note:"", image:"", amazon:"https://amzn.to/41xeUn6", post:"" }
+      {
+        tag: "Tech",
+        name: "JBL Vibe Beam - True Wireless JBL Deep Bass Sound Earbuds",
+        note: "Mint color, Bluetooth 5.2, 32hr battery life.",
+        image: "https://m.media-amazon.com/images/I/51oZM6anNaL._AC_SX679_.jpg",
+        amazon: "https://amzn.to/45ILk0l",
+        post: ""
+      },
+      {
+        tag: "Office",
+        name: "Amazon Basics Digital Postal Scale, 65 lb Capacity",
+        note: "Precise scale with AC adapter, 0.1 oz readability.",
+        image: "https://m.media-amazon.com/images/I/61RS6tsijzL._AC_SX679_.jpg",
+        amazon: "https://amzn.to/3HW10Er",
+        post: ""
+      },
+      {
+        tag: "Outdoors",
+        name: "COBIZI Pop Up Gazebo Screen Tent 12x12",
+        note: "Screen house with mosquito netting & carry bag.",
+        image: "https://m.media-amazon.com/images/I/81yPyA5WO3L._AC_SX679_.jpg",
+        amazon: "https://amzn.to/4mHXXPl",
+        post: ""
+      },
+      {
+        tag: "Camping",
+        name: "Fire-Maple Fixed Star 1 Cooking System",
+        note: "Pot/Jet burner stove system with ignition.",
+        image: "https://m.media-amazon.com/images/I/613vcRAfMAL._AC_SX679_.jpg",
+        amazon: "https://amzn.to/41ydubV",
+        post: ""
+      },
+      {
+        tag: "Home",
+        name: "3-in-1 Portable AC Unit",
+        note: "Mini AC with timer, USB charging, 1000ml water tank.",
+        image: "https://m.media-amazon.com/images/I/717-v0A72kL._AC_SX679_.jpg",
+        amazon: "https://amzn.to/41ydAQP",
+        post: ""
+      },
+      {
+        tag: "Apparel",
+        name: "Carhartt Women's Heavyweight Force Liner Glove",
+        note: "Durable gloves built for cold conditions.",
+        image: "https://m.media-amazon.com/images/I/81Vz7UB2YaL._AC_SY879_.jpg",
+        amazon: "https://amzn.to/4oThe1E",
+        post: ""
+      },
+      {
+        tag: "Apparel",
+        name: "Blundstone 585 Chelsea Boots",
+        note: "Classic rugged boots with comfort and style.",
+        image: "https://m.media-amazon.com/images/I/717aBiVR6hL._AC_SY695_.jpg",
+        amazon: "https://amzn.to/4g6uD2s",
+        post: ""
+      }
     ];
 
-    // ====== Rendering ======
     const grid = document.getElementById('grid');
     const empty = document.getElementById('empty');
     const search = document.getElementById('search');
 
     function placeholderHTML(name) {
       const n = (name || 'Product').trim();
-      return `
-        <div class="ph">
-          <div>${n}</div>
-          <small>Image coming soon</small>
-        </div>
-      `;
+      return `<div class="ph"><div>${n}</div><small>Image coming soon</small></div>`;
     }
 
     function imgBlock(it){
       const hasImg = it.image && it.image.trim().length;
       const safeName = it.name || 'Product image';
       const imgTag = hasImg
-        ? `<img src="${it.image}" alt="${safeName}">`
+        ? `<img src="${it.image}" alt="${safeName}" onerror="this.onerror=null; this.outerHTML='${placeholderHTML(safeName).replace(/"/g,'&quot;')}';">`
         : placeholderHTML(it.name);
-      // Wrap image in affiliate link
       return `<a href="${it.amazon}" target="_blank" rel="sponsored nofollow noopener">${imgTag}</a>`;
     }
 
@@ -204,9 +227,6 @@
           <a class="btn primary" href="${it.amazon}" target="_blank" rel="sponsored nofollow noopener">
             <i data-feather="shopping-cart"></i> Shop on Amazon
           </a>
-          ${it.post ? `<a class="btn" href="${it.post}">
-            <i data-feather="book-open"></i> Read post
-          </a>` : ``}
         </div>
       </article>`;
     }
