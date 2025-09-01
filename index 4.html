@@ -59,7 +59,6 @@
       color: #4a3b30;
       font-family: 'Gloock', serif;
     }
-
     .button-grid {
       display: flex;
       flex-wrap: wrap;
@@ -79,10 +78,7 @@
       text-align: center;
       border: 1px solid #d1bfa9;
       border-radius: 12px;
-      text-decoration: none;
-      color: #6a4e42;
       font-weight: bold;
-      font-family: 'Quicksand', sans-serif;
       transition: all 0.3s ease;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
@@ -98,25 +94,54 @@
       color: #998a7c;
       background: #f7f3ee;
     }
-      .fade-in {
+    .fade-in {
       animation: fadeInUp 1s ease-out both;
     }
-
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }.button-grid i {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .button-grid i {
       color: #5b4031;
       width: 18px;
       height: 18px;
     }
 
+    /* honey hollow preview section (special dark box) */
+    .hh-wrap{
+      margin-top: 2rem;
+      padding: 2rem 1.25rem;
+      background: #0a0809;
+      border-radius: 14px;
+      border: 1px solid #2a221c;
+      text-align:center;
+    }
+    .hh-title{
+      font-family:'Gloock',serif;
+      font-size:1.75rem;
+      margin:0 0 .5rem 0;
+      color:#efe4cf;
+    }
+    .hh-lede{
+      font-family:'Playfair Display',serif;
+      color:#b99c72;
+      line-height:1.6;
+      margin:.5rem auto 1.25rem;
+    }
+    .hh-btn{
+      display:inline-block;
+      padding:.9rem 1.25rem;
+      border:none;
+      border-radius:999px;
+      font-weight:700;
+      font-family:'Quicksand',sans-serif;
+      cursor:pointer;
+      background:linear-gradient(180deg,#c9942e,#a97722);
+      color:#111;
+      box-shadow:0 8px 20px rgba(0,0,0,.45);
+      transition:transform .12s ease,filter .2s ease;
+    }
+    .hh-btn:hover{ transform:translateY(-2px); filter:brightness(1.05); }
   </style>
 </head>
 <body>
@@ -139,88 +164,63 @@
 
   <main class="fade-in">
     <section id="about">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">About</h2>
-  <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">
-  Golden Hollow Co. is where soft light filters through quiet branches — a refuge for the curious and the wild-hearted alike.
-  Drawn to golden light, wild paths, and the quiet hum of beautiful things, this space was made to feel like stepping into a dream.
-</p>
-<p style="font-style: italic; font-family: 'Quicksand', sans-serif; font-size: 0.95rem; margin-top: 0.75rem;">
-  Not everything here is polished — some things are just what felt good that day.
-</p>
-  
-</section>
-    
+      <h2>About</h2>
+      <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">
+        Golden Hollow Co. is where soft light filters through quiet branches — a refuge for the curious and the wild-hearted alike.
+        Drawn to golden light, wild paths, and the quiet hum of beautiful things, this space was made to feel like stepping into a dream.
+      </p>
+      <p style="font-style: italic; font-family: 'Quicksand', sans-serif; font-size: 0.95rem; margin-top: 0.75rem;">
+        Not everything here is polished — some things are just what felt good that day.
+      </p>
+    </section>
 
     <section id="links">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">Shop & Social Links</h2>
-  <div class="button-grid">
-      <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
-<a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
+      <h2>Shop & Social Links</h2>
+      <div class="button-grid">
+        <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
+        <a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
         <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank"><i data-feather="box"></i> Whatnot</a>
         <a href="https://www.instagram.com/goldenhollowco" target="_blank"><i data-feather="camera"></i> Instagram</a>
-       <a href="https://www.twitch.tv/iamsam0418" target="_blank"><i data-feather="video"></i> Twitch</a>
-    <a href="https://www.tiktok.com/@iamsam0418" target="_blank"><i data-feather="video">< / i> TikTok</i>
+        <a href="https://www.twitch.tv/iamsam0418" target="_blank"><i data-feather="video"></i> Twitch</a>
+        <a href="https://www.tiktok.com/@iamsam0418" target="_blank"><i data-feather="video"></i> TikTok</a>
+        <a href="https://www.pinterest.com/goldenhollowco/?actingBusinessId=1140677549278669765" target="_blank"><i data-feather="image"></i> Pinterest</a>
+      </div>
     </section>
 
     <section id="videos">
-      <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">YouTube</h2>
-      <p style="font-family: 'Gloock', serif;">Check out the latest videos from the Hollow!</p>
+      <h2>YouTube</h2>
+      <p>Check out the latest videos from the Hollow!</p>
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/L8Gnvqj5rHw" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <section id="blog">
-  <img src="Screenshot 2025-05-02 at 9.18.52 PM.png" alt="Golden Hollow Tree" style="width: 100%; max-width: 800px; border-radius: 12px; margin-bottom: 1rem;" />
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem;">From the Blog</h2>
-  <article style="margin-top: 1rem;">
-    <h3 style="font-family: 'Gloock', serif; font-size: 1.25rem; margin-bottom: 0.25rem;">Welcome to the Hollow</h3>
-    <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">Thank you for wandering into Golden Hollow. Whether you're here for soft moments, vintage magic, or quiet inspiration, I'm so glad you're here. This space will grow and shift — just like the woods — and I'm excited to see where it takes us. ✨</p>
-  </article>
-</section>
+      <img src="Screenshot 2025-05-02 at 9.18.52 PM.png" alt="Golden Hollow Tree" style="width: 100%; max-width: 800px; border-radius: 12px; margin-bottom: 1rem;" />
+      <h2>From the Blog</h2>
+      <article style="margin-top: 1rem;">
+        <h3 style="font-family: 'Gloock', serif; font-size: 1.25rem; margin-bottom: 0.25rem;">Welcome to the Hollow</h3>
+        <p style="font-family: 'Quicksand', sans-serif; font-size: 1.05rem;">
+          Thank you for wandering into Golden Hollow. Whether you're here for soft moments, vintage magic, or quiet inspiration, I'm so glad you're here.
+          This space will grow and shift — just like the woods — and I'm excited to see where it takes us. ✨
+        </p>
+      </article>
+    </section>
 
-<section id="honey" class="hh-wrap">
-  <div class="hh-card">
-    <h2 class="hh-title">The Honey Hollow ✧</h2>
-    <p class="hh-lede">
-      Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.
-    </p>
+    <section id="honey" class="hh-wrap">
+      <div class="hh-card">
+        <h2 class="hh-title">The Honey Hollow ✧</h2>
+        <p class="hh-lede">
+          Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.
+        </p>
+        <button class="hh-btn" onclick="window.location.href='honey-hollow/index.html'">
+          ✧ Enter Honey Hollow (18+)
+        </button>
+      </div>
+    </section>
+  </main>
 
-    <button class="hh-btn" onclick="window.location.href='honey-hollow/index.html'">
-      ✧ Enter Honey Hollow (18+)
-    </button>
-  </div>
-</section>
-/* Honey Hollow preview section on homepage */
-.hh-wrap{
-  margin-top: 2rem;
-  padding: 2rem 1.25rem;
-  background: #0a0809;
-  border-radius: 14px;
-  border: 1px solid #2a221c;
-  text-align:center;
-}
-.hh-title{
-  font-family:'Gloock',serif;
-  font-size:1.75rem;
-  margin:0 0 .5rem 0;
-  color:#efe4cf;
-}
-.hh-lede{
-  font-family:'Playfair Display',serif;
-  color:#b99c72;
-  line-height:1.6;
-  margin:.5rem auto 1.25rem;
-}
-.hh-btn{
-  display:inline-block;
-  padding:.9rem 1.25rem;
-  border:none;
-  border-radius:999px;
-  font-weight:700;
-  font-family:'Quicksand',sans-serif;
-  cursor:pointer;
-  background:linear-gradient(180deg,#c9942e,#a97722);
-  color:#111;
-  box-shadow:0 8px 20px rgba(0,0,0,.45);
-  transition:transform .12s ease,filter .2s ease;
-}
-.hh-btn:hover{ transform:translateY(-2px); filter:brightness(1.05); }
+  <footer>
+    &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
+  </footer>
+  <script>feather.replace();</script>
+</body>
+</html>
