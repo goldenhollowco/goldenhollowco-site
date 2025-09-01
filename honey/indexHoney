@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- If they already confirmed on this device, skip the gate -->
-  <script>
+  <script> 
     if (localStorage.getItem('hh_isAdult') === 'true') {
       window.location.replace('links.html');
     }
