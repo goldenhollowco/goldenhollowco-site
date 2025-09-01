@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Honey Hollow ✧ — Age Gate</title>
 
-  <!-- Fonts to match your brand -->
+  <!-- Fonts to match your brand --> 
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- If they already confirmed on this device, skip the gate -->
