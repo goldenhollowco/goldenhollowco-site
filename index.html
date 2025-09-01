@@ -9,11 +9,15 @@
 
   <style>
     :root{
+      /* background paper + brand hues */
       --paper: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
       --ink:#3e2c20; --ink-soft:#5b4031;
       --gold:#c9942e; --gold-deep:#a97722;
+
+      /* Honey gate preview */
       --hh-bg:#0a0809; --hh-ring:#2a221c; --hh-ink:#efe4cf; --hh-accent:#b99c72;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -25,32 +29,35 @@
         var(--paper);
       background-repeat:repeat;
     }
-    a{color:var(--ink-soft);text-decoration:none}
+    a{color:var(--ink-soft); text-decoration:none}
 
-    /* HERO */
+    /* ================= HERO (new) ================= */
     .hero{
       position:relative;
-      min-height:56vh;
+      min-height:58vh;
       display:grid; place-items:center;
       overflow:hidden;
       border-bottom:1px solid rgba(0,0,0,.06);
+      /* your exact file in repo root */
+      background-image:url('ChatGPT Image May 2, 2025 at 10_35_09 PM.png');
       background-size:cover; background-position:center;
       isolation:isolate;
     }
+    /* softened cream/gold overlay so text stays readable */
     .hero::after{
       content:""; position:absolute; inset:0; z-index:1;
       background:
-        radial-gradient(120% 80% at 50% 0%, rgba(255,253,246,.78), rgba(255,253,246,.58) 35%, rgba(255,253,246,.35) 55%, rgba(36,25,19,.12)),
-        linear-gradient(180deg, rgba(255,253,246,.9), rgba(255,253,246,.35));
+        radial-gradient(120% 80% at 50% 0%, rgba(255,253,246,.80), rgba(255,253,246,.62) 38%, rgba(255,253,246,.38) 58%, rgba(36,25,19,.16)),
+        linear-gradient(180deg, rgba(255,253,246,.88), rgba(255,253,246,.35));
     }
     .hero-inner{
-      position:relative; z-index:2; text-align:center; padding:3.2rem 1rem 2.6rem;
+      position:relative; z-index:3; text-align:center; padding:3.2rem 1rem 2.6rem;
       filter: drop-shadow(0 6px 18px rgba(0,0,0,.16));
     }
-    .hero-logo{ width:130px; margin:0 auto .6rem; }
+    .hero-logo{ width:128px; margin:0 auto .6rem; border-radius:8px }
     .hero-title{
       font-family:'Gloock', serif;
-      font-size:clamp(2.2rem, 5vw, 3.4rem);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
       margin:.2rem 0 0;
       letter-spacing:.6px; color:#2a1c13;
       text-shadow:0 1px 0 rgba(255,255,255,.65);
@@ -59,44 +66,40 @@
       font-family:'Quicksand', sans-serif; color:#5a483e; margin-top:.55rem; font-size:1.05rem;
     }
 
-    /* Sparkles + Bees */
-    .sparkles{ position:absolute; inset:0; z-index:2; pointer-events:none; }
-    .sparkles span{
+    /* fireflies (subtle, drifting) */
+    .fireflies{ position:absolute; inset:0; z-index:2; pointer-events:none; }
+    .fireflies span{
       position:absolute; width:3px; height:3px; border-radius:50%;
-      background:#fbe6a6; opacity:0; filter:blur(.2px);
-      animation: twinkle 6s linear infinite;
+      background:#fbe6a6; opacity:0; filter:blur(.15px);
+      animation: twinkle 7.5s ease-in-out infinite;
     }
-    .sparkles span:nth-child(1){left:18%; top:22%; animation-delay:.2s}
-    .sparkles span:nth-child(2){left:32%; top:40%; animation-delay:1.1s}
-    .sparkles span:nth-child(3){left:66%; top:18%; animation-delay:2.2s}
-    .sparkles span:nth-child(4){left:78%; top:46%; animation-delay:.9s}
-    .sparkles span:nth-child(5){left:12%; top:58%; animation-delay:1.9s}
-    .sparkles span:nth-child(6){left:54%; top:30%; animation-delay:3.1s}
+    /* positions + drift delays */
+    .fireflies span:nth-child(1){left:12%; top:28%; animation-delay:.2s}
+    .fireflies span:nth-child(2){left:30%; top:18%; animation-delay:1.1s}
+    .fireflies span:nth-child(3){left:54%; top:24%; animation-delay:2.2s}
+    .fireflies span:nth-child(4){left:72%; top:16%; animation-delay:.9s}
+    .fireflies span:nth-child(5){left:86%; top:36%; animation-delay:1.9s}
+    .fireflies span:nth-child(6){left:20%; top:46%; animation-delay:3.1s}
+    .fireflies span:nth-child(7){left:44%; top:38%; animation-delay:2.9s}
     @keyframes twinkle{
-      0%,100%{opacity:0; transform:translateY(0)}
-      10%{opacity:.95}
-      50%{opacity:.25; transform:translateY(-2px)}
-      70%{opacity:.85}
-    }
-    .bee{
-      position:absolute; z-index:2; width:28px; height:28px; opacity:.9;
-      animation: buzz 10s ease-in-out infinite;
-    }
-    .bee:nth-of-type(1){ left:10%; top:18%; animation-delay:.2s }
-    .bee:nth-of-type(2){ right:12%; top:28%; animation-delay:1.4s }
-    .bee:nth-of-type(3){ left:22%; bottom:16%; animation-delay:.9s }
-    @keyframes buzz{
-      0%{ transform: translate(0,0) rotate(0deg) }
-      25%{ transform: translate(18px,-6px) rotate(6deg) }
-      50%{ transform: translate(-10px,-2px) rotate(-8deg) }
-      75%{ transform: translate(12px,6px) rotate(4deg) }
-      100%{ transform: translate(0,0) rotate(0deg) }
+      0%,100%{opacity:0; transform:translate(0,0)}
+      12%{opacity:.9}
+      50%{opacity:.25; transform:translate(-6px,-3px)}
+      72%{opacity:.8}
     }
 
-    /* NAV */
+    /* vintage wildflower corners (etched dandelions) */
+    .corner{
+      position:absolute; z-index:1; opacity:.85; pointer-events:none;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,.12));
+    }
+    .corner.left{ left:-4px; bottom:-8px; width:200px; }
+    .corner.right{ right:-4px; bottom:-8px; width:220px; transform: scaleX(-1); }
+
+    /* ================= NAV ================= */
     nav{
-      background:linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.25));
-      backdrop-filter:blur(2px);
+      background: linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.25));
+      backdrop-filter: blur(2px);
       padding:.9rem 1rem; text-align:center;
       border-top:1px solid rgba(0,0,0,.04); border-bottom:1px solid rgba(0,0,0,.06);
     }
@@ -105,16 +108,17 @@
     }
     nav a::after{
       content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
-      background:linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity:0; transform:translateY(2px); transition:.25s ease;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity:0; transform: translateY(2px); transition:.25s ease;
     }
-    nav a:hover::after{opacity:1; transform:translateY(0)}
+    nav a:hover::after{opacity:1; transform: translateY(0)}
 
+    /* ================= MAIN ================= */
     main{ padding:2rem; max-width:900px; margin:0 auto; }
     section{ margin-bottom:2rem; }
     h2{ font-family:'Gloock', serif; color:#4a3b30; font-size:1.8rem; margin-bottom:.75rem; }
 
-    /* Buttons */
+    /* Buttons grid */
     .button-grid{ display:flex; flex-wrap:wrap; gap:1rem; }
     .button-grid a{
       flex:1 1 calc(50% - 1rem);
@@ -127,8 +131,10 @@
     .button-grid a:hover{ background:#f2e5d7; transform:translateY(-2px); box-shadow:0 10px 18px rgba(170,126,74,.15); }
     .button-grid i{ width:18px; height:18px; color:#5b4031; }
 
+    /* Blog card image */
     .blog-hero{ width:100%; border-radius:12px; margin-bottom:1rem; box-shadow:0 12px 30px rgba(0,0,0,.08); }
 
+    /* Honey gate preview */
     .hh-wrap{ margin-top:2rem; padding:2rem 1.25rem; background:var(--hh-bg); border-radius:14px; border:1px solid var(--hh-ring); text-align:center; }
     .hh-title{ font-family:'Gloock',serif; font-size:1.75rem; margin:0 0 .5rem; color:var(--hh-ink); }
     .hh-lede{ font-family:'Playfair Display',serif; color:var(--hh-accent); margin:.5rem auto 1.25rem; }
@@ -144,27 +150,39 @@
   </style>
 </head>
 <body>
-  <header class="hero" style="background-image:url('ChatGPT Image May 2, 2025 at 10_35_09 PM.png');">
-    <!-- bees -->
-    <svg class="bee" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="12" cy="12" rx="6" ry="4" fill="#e3b64b"/><path d="M8 12h8" stroke="#5b4031" stroke-width="2"/>
-      <circle cx="16.5" cy="10.5" r="1.6" fill="#5b4031"/>
+
+  <!-- ============== HERO ============== -->
+  <header class="hero">
+    <!-- wildflower corners -->
+    <svg class="corner left" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#7b684f" stroke-width="1.2">
+      <path d="M36 228 C52 172, 84 124, 110 86" />
+      <circle cx="112" cy="83" r="3" fill="#c9b07f"/>
+      <path d="M110 86 q -12 -15 -26 -6 M110 86 q 14 -16 30 -6 M110 86 q -8 20 10 28" />
+      <path d="M60 210 C76 164, 108 130, 130 104" />
+      <circle cx="132" cy="101" r="2.6" fill="#c9b07f"/>
     </svg>
-    <svg class="bee" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="12" cy="12" rx="6" ry="4" fill="#e3b64b"/><path d="M8 12h8" stroke="#5b4031" stroke-width="2"/>
-      <circle cx="16.5" cy="10.5" r="1.6" fill="#5b4031"/>
+    <svg class="corner right" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#7b684f" stroke-width="1.2">
+      <path d="M36 228 C52 172, 84 124, 110 86" />
+      <circle cx="112" cy="83" r="3" fill="#c9b07f"/>
+      <path d="M110 86 q -12 -15 -26 -6 M110 86 q 14 -16 30 -6 M110 86 q -8 20 10 28" />
+      <path d="M60 210 C76 164, 108 130, 130 104" />
+      <circle cx="132" cy="101" r="2.6" fill="#c9b07f"/>
     </svg>
 
-    <!-- sparkles -->
-    <div class="sparkles"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <!-- gentle fireflies -->
+    <div class="fireflies">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
 
     <div class="hero-inner">
-      <img class="hero-logo" src="golden_hollow_logo.jpeg" alt="Golden Hollow Co. logo"/>
+      <img class="hero-logo" src="golden_hollow_logo.jpeg" alt="Golden Hollow Co. logo" />
       <h1 class="hero-title">Golden Hollow Co.</h1>
       <p class="hero-tag">Creating. Curating. Captivating. • Discover the glow within.</p>
     </div>
   </header>
 
+  <!-- ============== NAV ============== -->
   <nav>
     <a href="#about">About</a>
     <a href="#links">Links</a>
@@ -173,52 +191,10 @@
     <a href="#honey">The Honey Hollow ✧</a>
   </nav>
 
+  <!-- ============== MAIN ============== -->
   <main>
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
-      <p>Golden Hollow Co. is where soft light filters through quiet branches — a refuge for the curious and the wild-hearted alike.</p>
-      <p><em>Not everything here is polished — some things are just what felt good that day.</em></p>
-    </section>
-
-    <section id="links">
-      <h2>Shop & Social Links</h2>
-      <div class="button-grid">
-        <a href="https://cash.app/$honeyhollow" target="_blank"><i data-feather="heart"></i> Tip Jar</a>
-        <a href="https://poshmark.com/closet/goldenhollowco" target="_blank"><i data-feather="shopping-bag"></i> Poshmark</a>
-        <a href="https://www.whatnot.com/user/goldenhollowco" target="_blank"><i data-feather="box"></i> Whatnot</a>
-        <a href="https://www.instagram.com/goldenhollowco" target="_blank"><i data-feather="camera"></i> Instagram</a>
-        <a href="https://www.twitch.tv/iamsam0418" target="_blank"><i data-feather="video"></i> Twitch</a>
-        <a href="https://www.tiktok.com/@iamsam0418" target="_blank"><i data-feather="video"></i> TikTok</a>
-        <a href="https://www.pinterest.com/goldenhollowco/?actingBusinessId=1140677549278669765" target="_blank"><i data-feather="image"></i> Pinterest</a>
-      </div>
-    </section>
-
-    <section id="videos">
-      <h2>YouTube</h2>
-      <p>Check out the latest videos from the Hollow!</p>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/L8Gnvqj5rHw" frameborder="0" allowfullscreen></iframe>
-    </section>
-
-    <section id="blog">
-      <h2>From the Blog</h2>
-      <img class="blog-hero" src="Screenshot 2025-05-02 at 9.18.52 PM.png" alt="Golden Hollow Tree" />
-      <article>
-        <h3>Welcome to the Hollow</h3>
-        <p>Thank you for wandering into Golden Hollow. Whether you're here for soft moments, vintage magic, or quiet inspiration, I'm so glad you're here. This space will grow and shift — just like the woods — and I'm excited to see where it takes us. ✨</p>
-      </article>
-    </section>
-
-    <section id="honey" class="hh-wrap">
-      <h2 class="hh-title">The Honey Hollow ✧</h2>
-      <p class="hh-lede">Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.</p>
-      <button class="hh-btn" onclick="window.location.href='honey/index.html'">✧ Enter Honey Hollow (18+)</button>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
-  </footer>
-
-  <script>feather.replace();</script>
-</body>
-</html>
+      <p style="font-family:'Quicksand',sans-serif; font-size:1.05rem;">
+        Golde
