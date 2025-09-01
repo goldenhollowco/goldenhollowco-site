@@ -20,109 +20,66 @@
       padding: 2rem;
       text-align: center;
     }
-    header img {
-      max-width: 120px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    nav {
-      background: #e8dcca;
-      padding: 1rem;
-      text-align: center;
-    }
+    header img { max-width: 120px; margin-bottom: 1rem; }
+    header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+
+    nav { background: #e8dcca; padding: 1rem; text-align: center; }
     nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      color: #5b4031;
-      font-family: 'Quicksand', sans-serif;
-      transition: color 0.3s ease;
+      margin: 0 1rem; text-decoration: none; font-weight: 600; color: #5b4031;
+      font-family: 'Quicksand', sans-serif; transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #3e2c20;
-    }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
+    nav a:hover { color: #3e2c20; }
+
+    main { padding: 2rem; max-width: 800px; margin: 0 auto; }
+    section { margin-bottom: 2rem; }
     h2 {
-      border-bottom: 2px solid #e0cdbc;
-      padding-bottom: 0.5rem;
-      color: #4a3b30;
-      font-family: 'Gloock', serif;
+      border-bottom: 2px solid #e0cdbc; padding-bottom: 0.5rem;
+      color: #4a3b30; font-family: 'Gloock', serif;
     }
-    .button-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+
+    .button-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
     .button-grid a {
       flex: 1 1 calc(50% - 1rem);
-      background: #f4ede3;
-      padding: 1rem;
-      text-align: center;
-      border: 1px solid #d1bfa9;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #6a4e42;
-      font-weight: bold;
-      font-family: 'Quicksand', sans-serif;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+      background: #f4ede3; padding: 1rem; text-align: center;
+      border: 1px solid #d1bfa9; border-radius: 12px; text-decoration: none;
+      color: #6a4e42; font-weight: bold; font-family: 'Quicksand', sans-serif;
+      transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
     }
-    .button-grid a:hover {
-      background: #f1e3d2;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transform: translateY(-2px);
-    }
-    .store-section {
-      text-align: center;
-      margin: 3rem 0;
-    }
+    .button-grid a:hover { background: #f1e3d2; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transform: translateY(-2px); }
+
+    .store-section { text-align: center; margin: 3rem 0; }
     .store-section a {
-      display:inline-block;
-      background: linear-gradient(180deg, #c9942e, #a97722);
-      color:#fff;
-      padding:1rem 2rem;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:bold;
-      font-family:'Quicksand',sans-serif;
-      font-size:1.2rem;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      display:inline-block; background: linear-gradient(180deg, #c9942e, #a97722); color:#fff;
+      padding:1rem 2rem; border-radius:12px; text-decoration:none; font-weight:bold;
+      font-family:'Quicksand',sans-serif; font-size:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.15);
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .store-section a:hover {
-      transform:translateY(-2px);
-      box-shadow:0 6px 16px rgba(0,0,0,0.2);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #998a7c;
-      background: #f7f3ee;
-    }
-    .fade-in {
-      animation: fadeInUp 1s ease-out both;
-    }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+    .store-section a:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.2); }
+
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #998a7c; background: #f7f3ee; }
+
+    .fade-in { animation: fadeInUp 1s ease-out both; }
+    @keyframes fadeInUp { 0% { opacity:0; transform:translateY(20px);} 100% { opacity:1; transform:translateY(0);} }
     .button-grid i { color: #5b4031; width: 18px; height: 18px; }
+
+    /* ---- YouTube carousel styles (scoped to #videos) ---- */
+    #videos .yt-wrap{
+      position:relative; width:100%; aspect-ratio:16/9; background:#111; border-radius:12px; overflow:hidden;
+      box-shadow:0 10px 24px rgba(0,0,0,.15);
+    }
+    #videos .thumbs{
+      margin-top:.75rem; display:flex; gap:.5rem; overflow-x:auto; padding-bottom:.25rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    #videos .thumb{
+      flex:0 0 140px; border-radius:10px; overflow:hidden; position:relative; cursor:pointer;
+      border:2px solid transparent; transition:transform .12s ease, border-color .12s ease;
+      background:#000;
+    }
+    #videos .thumb img{ width:100%; height:100%; object-fit:cover; display:block }
+    #videos .thumb:hover{ transform:translateY(-1px) }
+    #videos .thumb.active{ border-color:#c9942e }
   </style>
 </head>
 <body>
@@ -137,7 +94,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#links">Links</a>
-    <a href="store/index.html">Store</a> <!-- NEW STORE LINK -->
+    <a href="store/index.html">Store</a>
     <a href="#videos">YouTube</a>
     <a href="#blog">Blog</a>
     <a href="#honey">The Honey Hollow ✧</a>
@@ -173,18 +130,62 @@
       </div>
     </section>
 
+    <!-- ===== YouTube Carousel (3 videos) ===== -->
     <section id="videos">
       <h2>YouTube</h2>
-      <p>Check out the latest videos from the Hollow!</p>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/L8Gnvqj5rHw" frameborder="0" allowfullscreen></iframe>
-    </section>
+      <p>Check out the latest from the Hollow ✨</p>
 
+      <div class="yt-wrap">
+        <iframe id="ytPlayer" width="100%" height="100%"
+          src="https://www.youtube.com/embed/GAtzmamSMbI"
+          title="Golden Hollow — Featured video"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="thumbs" id="ytThumbs" aria-label="Video carousel"></div>
+
+      <script>
+        // Use plain YouTube IDs (the bit after v= or after /shorts/)
+        const videos = [
+          { id: "GAtzmamSMbI", title: "New Golden Hollow Short" },
+          { id: "HEwGIc5Bres", title: "Boss mode (Shorts)" },
+          { id: "L8Gnvqj5rHw", title: "Welcome to Golden Hollow" }
+        ];
+        const player   = document.getElementById('ytPlayer');
+        const thumbsEl = document.getElementById('ytThumbs');
+
+        function thumbURL(id){ return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`; }
+        function embedURL(id){ return `https://www.youtube.com/embed/${id}`; }
+
+        function renderThumbs(){
+          thumbsEl.innerHTML = videos.map((v,i)=>`
+            <button class="thumb ${i===0?'active':''}" data-vid="${v.id}" title="${v.title}">
+              <img src="${thumbURL(v.id)}" alt="${v.title}">
+            </button>
+          `).join('');
+          thumbsEl.querySelectorAll('.thumb').forEach(btn=>{
+            btn.addEventListener('click',()=>{
+              player.src = embedURL(btn.getAttribute('data-vid'));
+              thumbsEl.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active'));
+              btn.classList.add('active');
+            });
+          });
+        }
+        renderThumbs();
+      </script>
+    </section>
+    <!-- ===== End YouTube Carousel ===== -->
+
+    <!-- Blog hero image (fixed link) + curated Substack cards -->
     <section id="blog">
-      <<img
-  src="ChatGPT%20Image%20May%202,%202025%20at%2009_18_58%20PM.png"
-  alt="Golden Hollow Tree"
-  style="width: 100%; max-width: 800px; border-radius: 12px; margin-bottom: 1rem;"
-/>
+      <img
+        src="ChatGPT%20Image%20May%202,%202025%20at%2009_18_58%20PM.png"
+        alt="Golden Hollow Tree"
+        style="width: 100%; max-width: 800px; border-radius: 12px; margin-bottom: 1rem;"
+      />
 
       <h2>From the Blog</h2>
       <article style="margin-top: 1rem;">
@@ -194,106 +195,100 @@
           This space will grow and shift — just like the woods — and I'm excited to see where it takes us. ✨
         </p>
       </article>
-      <section id="blog">
-  <style>
-    /* Scoped styles just for the blog grid */
-    #blog .blog-head {
-      display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
-    }
-    #blog .blog-grid {
-      display:grid; gap:1rem;
-      grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
-      margin-top:1rem;
-    }
-    #blog .card {
-      background:#f6efe5; border:1px solid #d1bfa9; border-radius:14px; overflow:hidden;
-      display:flex; flex-direction:column; box-shadow:0 6px 18px rgba(170,126,74,.12);
-      transition:transform .15s ease, box-shadow .2s ease;
-    }
-    #blog .card:hover { transform:translateY(-2px); box-shadow:0 16px 26px rgba(170,126,74,.18); }
-    #blog .imgwrap { aspect-ratio:16/10; background:linear-gradient(180deg,#fff3e0,#f7e2c3); overflow:hidden }
-    #blog .imgwrap img { width:100%; height:100%; object-fit:cover; display:block }
-    #blog .body { padding:1rem }
-    #blog .title { font-family:'Gloock',serif; font-size:1.1rem; margin:.2rem 0 .4rem; color:#3e2c20 }
-    #blog .blurb { font-family:'Quicksand',sans-serif; color:#6a5548; font-size:.95rem; margin:0 0 .9rem }
-    #blog .actions { padding:0 1rem 1rem; margin-top:auto }
-    #blog .btn {
-      display:inline-block; background:linear-gradient(180deg,#c9942e,#a97722); color:#1b140f;
-      padding:.7rem 1rem; border-radius:10px; text-decoration:none; font-weight:700;
-      font-family:'Quicksand',sans-serif; border:1px solid #b9892f;
-      box-shadow:0 8px 16px rgba(0,0,0,.12); transition:transform .12s ease, filter .15s ease;
-    }
-    #blog .btn:hover { transform:translateY(-1px); filter:brightness(1.05) }
-    #blog .more { font-family:'Quicksand',sans-serif; font-size:.95rem }
-  </style>
 
-  <div class="blog-head">
-    <h2 style="font-family:'Gloock',serif; color:#4a3b30; margin:0">From the Blog</h2>
-    <a class="more" href="https://substack.com/@goldenhollowco?r=636pmu&utm_medium=ios&utm_source=profile" target="_blank" rel="noopener">More on Substack →</a>
-  </div>
+      <style>
+        /* Scoped styles just for the blog grid */
+        #blog .blog-head { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; }
+        #blog .blog-grid {
+          display:grid; gap:1rem;
+          grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+          margin-top:1rem;
+        }
+        #blog .card {
+          background:#f6efe5; border:1px solid #d1bfa9; border-radius:14px; overflow:hidden;
+          display:flex; flex-direction:column; box-shadow:0 6px 18px rgba(170,126,74,.12);
+          transition:transform .15s ease, box-shadow .2s ease;
+        }
+        #blog .card:hover { transform:translateY(-2px); box-shadow:0 16px 26px rgba(170,126,74,.18); }
+        #blog .imgwrap { aspect-ratio:16/10; background:linear-gradient(180deg,#fff3e0,#f7e2c3); overflow:hidden }
+        #blog .imgwrap img { width:100%; height:100%; object-fit:cover; display:block }
+        #blog .body { padding:1rem }
+        #blog .title { font-family:'Gloock',serif; font-size:1.1rem; margin:.2rem 0 .4rem; color:#3e2c20 }
+        #blog .blurb { font-family:'Quicksand',sans-serif; color:#6a5548; font-size:.95rem; margin:0 0 .9rem }
+        #blog .actions { padding:0 1rem 1rem; margin-top:auto }
+        #blog .btn {
+          display:inline-block; background:linear-gradient(180deg,#c9942e,#a97722); color:#1b140f;
+          padding:.7rem 1rem; border-radius:10px; text-decoration:none; font-weight:700;
+          font-family:'Quicksand',sans-serif; border:1px solid #b9892f;
+          box-shadow:0 8px 16px rgba(0,0,0,.12); transition:transform .12s ease, filter .15s ease;
+        }
+        #blog .btn:hover { transform:translateY(-1px); filter:brightness(1.05) }
+        #blog .more { font-family:'Quicksand',sans-serif; font-size:.95rem }
+      </style>
 
-  <div class="blog-grid" id="blogGrid"></div>
+      <div class="blog-head">
+        <h2 style="font-family:'Gloock',serif; color:#4a3b30; margin:0">From the Blog</h2>
+        <a class="more" href="https://substack.com/@goldenhollowco?r=636pmu&utm_medium=ios&utm_source=profile" target="_blank" rel="noopener">More on Substack →</a>
+      </div>
 
-  <script>
-    // Hand-pick the Substack posts that match products you’re featuring.
-    // Tip: use a product image for stronger conversion.
-    const posts = [
-      // EXAMPLE — replace these with your real posts
-      {
-        title: "My Cozy Camp Coffee Setup (Fast, Hot, No Fuss)",
-        href: "https://substack.com/@goldenhollowco?p=camp-coffee", // your real Substack post URL
-        image: "https://m.media-amazon.com/images/I/613vcRAfMAL._AC_SX679_.jpg", // Fire-Maple image (or your uploaded image)
-        blurb: "The compact stove + kettle I actually take on weekend trips—and why it replaced my old setup."
-      },
-      {
-        title: "Fall Boots That Actually Last",
-        href: "https://substack.com/@goldenhollowco?p=fall-boots",
-        image: "https://m.media-amazon.com/images/I/717aBiVR6hL._AC_SY695_.jpg", // Blundstone
-        blurb: "Leather that wears in, not out—plus how I break them in without blisters."
-      },
-      {
-        title: "Packing the Screen Tent: What I Learned",
-        href: "https://substack.com/@goldenhollowco?p=screen-tent",
-        image: "https://m.media-amazon.com/images/I/81yPyA5WO3L._AC_SX679_.jpg", // COBIZI
-        blurb: "Bugs: denied. Shade: achieved. Notes from real-world setup in a windy field."
-      }
-    ];
+      <div class="blog-grid" id="blogGrid"></div>
 
-    const blogGrid = document.getElementById('blogGrid');
-    blogGrid.innerHTML = posts.map(p => `
-      <article class="card">
-        <a class="imgwrap" href="${p.href}" target="_blank" rel="noopener">
-          <img src="${p.image}" alt="${p.title}">
-        </a>
-        <div class="body">
-          <h3 class="title">${p.title}</h3>
-          <p class="blurb">${p.blurb || ""}</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="${p.href}" target="_blank" rel="noopener">Read on Substack</a>
-        </div>
-      </article>
-    `).join('');
-  </script>
-</section>
-
+      <script>
+        // Hand-pick Substack posts that match products you’re featuring.
+        const posts = [
+          {
+            title: "My Cozy Camp Coffee Setup (Fast, Hot, No Fuss)",
+            href: "https://substack.com/@goldenhollowco?p=camp-coffee",
+            image: "https://m.media-amazon.com/images/I/613vcRAfMAL._AC_SX679_.jpg",
+            blurb: "The compact stove + kettle I actually take on weekend trips—and why it replaced my old setup."
+          },
+          {
+            title: "Fall Boots That Actually Last",
+            href: "https://substack.com/@goldenhollowco?p=fall-boots",
+            image: "https://m.media-amazon.com/images/I/717aBiVR6hL._AC_SY695_.jpg",
+            blurb: "Leather that wears in, not out—plus how I break them in without blisters."
+          },
+          {
+            title: "Packing the Screen Tent: What I Learned",
+            href: "https://substack.com/@goldenhollowco?p=screen-tent",
+            image: "https://m.media-amazon.com/images/I/81yPyA5WO3L._AC_SX679_.jpg",
+            blurb: "Bugs: denied. Shade: achieved. Notes from real-world setup in a windy field."
+          }
+        ];
+        const blogGrid = document.getElementById('blogGrid');
+        blogGrid.innerHTML = posts.map(p => `
+          <article class="card">
+            <a class="imgwrap" href="${p.href}" target="_blank" rel="noopener">
+              <img src="${p.image}" alt="${p.title}">
+            </a>
+            <div class="body">
+              <h3 class="title">${p.title}</h3>
+              <p class="blurb">${p.blurb || ""}</p>
+            </div>
+            <div class="actions">
+              <a class="btn" href="${p.href}" target="_blank" rel="noopener">Read on Substack</a>
+            </div>
+          </article>
+        `).join('');
+      </script>
     </section>
 
-  <!-- Honey preview -->
-  <section id="honey" style="background:#1c1410; color:#f8f0e6; padding:2rem; border-radius:12px;">
-  <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem; color:#d4aa7d;">The Honey Hollow ✧</h2>
-  <p style="font-family: 'Gloock', serif; color: #e1c7ae;">
-    Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.
-  </p>
-  <div style="text-align:center; margin-top:1.5rem;">
-    <a href="honey/index.html" 
-       style="display:inline-block; background:linear-gradient(180deg,#c9942e,#a97722); color:#fff;
-              padding:1rem 2rem; border-radius:12px; text-decoration:none; font-weight:bold;
-              font-family:'Quicksand',sans-serif; font-size:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-      ✦ Enter Honey Hollow ✦
-    </a>
-  </div>
-</section>
+    <!-- Honey preview -->
+    <section id="honey" style="background:#1c1410; color:#f8f0e6; padding:2rem; border-radius:12px;">
+      <h2 style="font-family: 'Gloock', serif; font-size: 1.75rem; color:#d4aa7d;">The Honey Hollow ✧</h2>
+      <p style="font-family: 'Gloock', serif; color: #e1c7ae;">
+        Whispers behind this gate are 18+ only. Step gently, and only if you're meant to.
+      </p>
+      <div style="text-align:center; margin-top:1.5rem;">
+        <a href="honey/index.html" 
+           style="display:inline-block; background:linear-gradient(180deg,#c9942e,#a97722); color:#fff;
+                  padding:1rem 2rem; border-radius:12px; text-decoration:none; font-weight:bold;
+                  font-family:'Quicksand',sans-serif; font-size:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+          ✦ Enter Honey Hollow ✦
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Golden Hollow Co. | Designed with love in the Hollow 🌿
@@ -302,4 +297,3 @@
   <script>feather.replace();</script>
 </body>
 </html>
-
